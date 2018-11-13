@@ -1,3 +1,10 @@
+# Azure Sphere Hardware Designs
+
+This repository houses Microsoft-created hardware designs for the Azure Sphere product.
+
+# Project List
+
+- P-MT3620RDB-1-0 - Version 1.0 of the MT3620 Reference Development Board (RDB)
 
 # Contributing
 
