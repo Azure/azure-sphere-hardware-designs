@@ -1,0 +1,28 @@
+------------------------------------------------------------------------------------------
+Gerber File Extension Report For: P-MT3620RDB-1-0.GBR   29/03/2018  17:35:48
+------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------
+Layer Extension     Layer Description                      
+------------------------------------------------------------------------------------------
+.GTL                Component Side                          
+.GP1                Ground Plane                            
+.GP2                Power Plane                             
+.GBL                Solder Side                             
+.GPB                Bottom Pad Master                       
+.GPT                Top Pad Master                          
+.GTO                Top Overlay                             
+.GTP                Top Paste                               
+.GTS                Top Solder                              
+.GBS                Bottom Solder                           
+.GBP                Bottom Paste                            
+.GBO                Bottom Overlay                          
+.GKO                Keep-Out Layer                          
+.GM31               Board Outline (31)                      
+.GM30               Graphics Bottom (30)                    
+.GM29               Graphics Top (29)                       
+.GM15               Mechanical 15                           
+.GM13               Mechanical 13                           
+.GM1                Mechanical 1                            
+------------------------------------------------------------------------------------------

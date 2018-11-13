@@ -1,0 +1,23 @@
+----------------------------------------------------------------------------------------------------------------------------------
+NCDrill File Report For: P-MT3620RDB-1-0.PcbDoc   29/03/2018  17:35:56
+----------------------------------------------------------------------------------------------------------------------------------
+
+Layer Pair : Component Side to Solder Side
+ASCII RoundHoles File : P-MT3620RDB-1-0-RoundHoles.TXT
+ASCII SlotHoles File : P-MT3620RDB-1-0-SlotHoles.TXT
+
+Tool       Hole Size               Hole Tolerance               Hole Type       Hole Count   Plated         Tool Travel
+----------------------------------------------------------------------------------------------------------------------------------
+T1      0.2mm (8mil)                                              Round             810       PTH        1585.47mm (62.42inch)
+T2      0.3mm (12mil)                                             Round             2         PTH        2.60mm (0.10inch)
+T3      0.7mm (28mil)                                             Round             2         PTH        4.85mm (0.19inch)
+T4      0.7mm (28mil)                                             Slot              2         PTH        15.31mm (0.60inch)
+T5      1.016mm (40mil)                                           Round             7         PTH        18.55mm (0.73inch)
+T6      1.32mm (52mil)                                            Round             1         PTH        0.00mm (0.00inch)
+T7      1.6mm (63mil)                                             Round             2         NPTH       4.00mm (0.16inch)
+T8      1.65mm (65mil)                                            Round             8         NPTH       98.41mm (3.87inch)
+T9      3mm (118mil)                                              Round             4         NPTH       142.00mm (5.59inch)
+----------------------------------------------------------------------------------------------------------------------------------
+Totals                                                                              838
+
+Total Processing Time (hh:mm:ss) : 00:00:00
