@@ -4,10 +4,10 @@ This directory contains the design files for the MT3620 Reference Development Bo
 
 - Production P-MT3620RDB-1-0.PDF contains the schematics and PCB layout. The schematics appear in the following order:
     1. MT3620 RDB WiFi describes the Wi-Fi interface
-    1. MT3620 RDB PIO describes the programmed I/O subsystem
-    1. MT3620 RDB PMU describes the power management unit.
-    1. MT3620 RDB FTDI describes the debugging interface.
-    1. MT3620 RDB Dev
+    2. MT3620 RDB PIO describes the programmed I/O subsystem
+    3. MT3620 RDB PMU describes the power management unit.
+    4. MT3620 RDB FTDI describes the debugging interface.
+    5. MT3620 RDB Dev
 
 - Altium P-MT3620RDB-1-0 contains the Altium Designer schematics, PCB layout, and supporting project files.
 
