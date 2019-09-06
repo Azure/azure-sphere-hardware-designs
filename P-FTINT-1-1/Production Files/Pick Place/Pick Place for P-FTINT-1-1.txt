@@ -1,0 +1,38 @@
+Altium Designer Pick and Place Locations
+C:\DevMSR\4x4\TFVC\BlancaHW\Interfaces\P-FTINT-1-1\Altium\Project Outputs for P-FTINT-1-1\Pick Place\Pick Place for P-FTINT-1-1.txt
+
+========================================================================================================================
+File Design Information:
+
+Date:       09/08/19
+Time:       16:38
+Revision:   Not in VersionControl
+Variant:    No variations
+Units used: mil
+
+Designator Comment            Layer    Footprint                 Center-X(mil) Center-Y(mil) Rotation Description                                             
+R6         33R                TopLayer RES0603                   235.000       887.000       90       "RES SMD 33 OHM 5% 1/10W 0603"                          
+J3         0901310765         TopLayer 901310765                 926.181       514.461       360      "CONN HEADER 10POS .100" STR GOLD"                      
+J4         0901310765         TopLayer 901310765                 1522.240      514.461       0        "CONN HEADER 10POS .100" STR GOLD"                      
+R16        2K2                TopLayer RES0603                   1316.929      926.181       270      "RES SMD 2.2K OHM 5% 1/10W 0603"                        
+R15        2K2                TopLayer RES0603                   1522.638      926.181       270      "RES SMD 2.2K OHM 5% 1/10W 0603"                        
+R14        604R               TopLayer RES0603                   1875.000      1616.575      90       "RES SMD 604 OHM 1% 1/10W 0603"                         
+U1         74LCX126MX         TopLayer 74LCX126MX                441.000       1014.000      360      "Buffers & Line Drivers LV Quad Buffer 5V Tolerant I/O" 
+R13        604R               TopLayer RES0603                   1687.480      1451.906      270      "RES SMD 604 OHM 1% 1/10W 0603"                         
+R12        4K7                TopLayer RES0603                   1787.000      2097.000      360      "RES SMD 4.7K OHM 5% 1/10W 0603"                        
+R11        4K7                TopLayer RES0603                   1787.000      2193.000      360      "RES SMD 4.7K OHM 5% 1/10W 0603"                        
+R10        4K7                TopLayer RES0603                   323.000       1420.000      270      "RES SMD 4.7K OHM 5% 1/10W 0603"                        
+R9         4K7                TopLayer RES0603                   158.000       1420.000      270      "RES SMD 4.7K OHM 5% 1/10W 0603"                        
+R8         33R                TopLayer RES0603                   323.000       1618.000      270      "RES SMD 33 OHM 5% 1/10W 0603"                          
+R7         33R                TopLayer RES0603                   663.000       990.000       90       "RES SMD 33 OHM 5% 1/10W 0603"                          
+R5         33R                TopLayer RES0603                   323.000       1768.000      270      "RES SMD 33 OHM 5% 1/10W 0603"                          
+R4         33R                TopLayer RES0603                   323.819       1918.307      90       "RES SMD 33 OHM 5% 1/10W 0603"                          
+R3         4K7                TopLayer RES0603                   230.000       1190.000      90       "RES SMD 4.7K OHM 5% 1/10W 0603"                        
+R2         33R                TopLayer RES0603                   522.000       780.000       360      "RES SMD 33 OHM 5% 1/10W 0603"                          
+R1         33R                TopLayer RES0603                   177.000       1020.000      90       "RES SMD 33 OHM 5% 1/10W 0603"                          
+M1         FT4232H-56QMINIMDL TopLayer FT4232H-56Q               984.409       1995.000      0        "IC MINI MODULE USB/FIFO 56QFN"                         
+J2         MOLEX-0022284020   TopLayer 0022284020                1763.575      1911.000      360      "CONN HEADER 2POS .100 VERT TIN"                        
+J1         FTSH-105-01-F-DV-K TopLayer SAMTEC-FTSH-105-01-X-DV-K 372.047       518.701       90       "CONN HEADER 10POS DUAL .05" SMD"                       
+D2         SML-D12P           TopLayer Rohm_SML-D12_Green        1781.480      1622.480      90       "1.6 x 0.8 x 0.55mm (0603) LED 560nm Green"             
+D1         SML-D12U           TopLayer Rohm_SML-D12_Red          1687.480      1622.480      90       "1.6 x 0.8 x 0.55mm (0603) LED 620nm Red"               
+C1         0.1uF              TopLayer CAP_0603_(1608)_x_1.2mm   638.000       1196.000      270      "CAP CER 0.1UF 25V X7R 0603"                            
