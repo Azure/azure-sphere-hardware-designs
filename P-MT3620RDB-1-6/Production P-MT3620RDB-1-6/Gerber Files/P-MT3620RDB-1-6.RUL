@@ -1,0 +1,8 @@
+DRC Rules Export File for PCB: P-MT3620RDB-1-6.PcbDoc
+RuleKind=Clearance|RuleName=Clearance|Scope=Board|Minimum=4.92
+RuleKind=ShortCircuit|RuleName=ShortCircuit|Scope=Board|Allowed=0
+RuleKind=Clearance|RuleName=Clearance_RF|Scope=Board|Minimum=6.69
+RuleKind=Width|RuleName=Width|Scope=Board|Minimum=4.92
+RuleKind=SolderMaskExpansion|RuleName=SolderMaskExpansion|Scope=Board|Minimum=4.00
+RuleKind=Clearance|RuleName=Clearance_Fiducials|Scope=Board|Minimum=19.69
+RuleKind=Clearance|RuleName=Clearance_RFD|Scope=Board|Minimum=5.00
