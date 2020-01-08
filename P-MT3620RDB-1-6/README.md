@@ -30,4 +30,4 @@ MT3620_Standard_Interface.xml is the XML configuration file used to program the 
 
 Programming the EEPROM using the contents of MT3620_Standard_Interface.xml is required for the Azure Sphere SDK to recognize the FTDI device as a valid programming and debugging interface. Instructions for doing this can be found in the [Azure Sphere documentation](https://docs.microsoft.com/en-us/azure-sphere/hardware/mt3620-mcu-program-debug-interface#using-the-ft_prog-gui-application).
 
-Additionally, the [MT3620 RDB user guide](https://docs.microsoft.com/en-gb/azure-sphere/hardware/mt3620-user-guide) provides a user-level overview of the board's main features. 
+Additionally, the [MT3620 RDB user guide](https://docs.microsoft.com/azure-sphere/hardware/mt3620-user-guide) provides a user-level overview of the board's main features. 
