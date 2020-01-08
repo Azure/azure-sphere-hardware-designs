@@ -28,3 +28,5 @@ P-MT3620RDB-1-0_StructuredBoM.xlsx is an Excel spreadsheet that contains the bil
 
 MT3620_Standard_Interface.xml is the XML configuration file used to program the FTDI EEPROM chip using FTDI's FT_Prog Utility. 
 Programming the EEPROM chip is necessary for the board to be correctly detected as an Azure Sphere MT3620 RDB.
+
+Additionally, the [MT3620 RDB user guide](https://docs.microsoft.com/azure-sphere/hardware/mt3620-user-guide) provides a user-level overview of the board's main features. 
