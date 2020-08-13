@@ -10,4 +10,5 @@ Programming the EEPROM using the contents of MT3620_Standard_Interface.xml is re
 
 | Version | Notes                   |
 | :-------: | :----------------------- |
+| V1.1    | Changed ports A, C and D to use the D2XX driver rather than the VCP driver. Changed the serial number from a single fixed value to randomly auto-generated. |
 | V1.0    | First version. |
