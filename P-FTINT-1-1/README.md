@@ -26,4 +26,4 @@ Production Files folder contains the gerber, drill, and pick and place data file
 
 P-FTINT-1-1 (BoM).xlsx is an Excel spreadsheet that contains the bill of materials.
 
-MT3620_Standard_Interface.xml is the XML configuration file used to program the FTDI EEPROM chip using FTDI's FT_Prog Utility.
+Note: It is necessary to program the FTDI EEPROM using the contents of the [MT3620_Standard_Interface.xml](https://github.com/Azure/azure-sphere-hardware-designs/tree/master/FTDI) configuration before the Azure Sphere SDK will recognize the FTDI device as a valid programming and debugging interface.
