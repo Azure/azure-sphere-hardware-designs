@@ -1,6 +1,8 @@
 # Azure Sphere MT3620 RDB v1.6 Design and Production Files
 
-This directory contains the design files for the MT3620 Reference Development Board (RDB). These consist of the following:
+## Description
+
+This project contains the design files for the MT3620 Reference Development Board (RDB) v1.6. These consist of the following:
 
 P-MT3620RDB-1-6 (Production).PDF contains the schematics and PCB layout. The schematics appear in the following order:
 
@@ -26,8 +28,13 @@ P-MT3620RDB-1-6_StructuredBoM (Production).xlsx is an Excel spreadsheet that con
 - Parts required to support the Future Technology Devices International (FTDI) interface
 - Parts required to support general development board features
 
-MT3620_Standard_Interface.xml is the XML configuration file used to program the FTDI EEPROM chip using FTDI's FT_Prog Utility.
-
-Programming the EEPROM using the contents of MT3620_Standard_Interface.xml is required for the Azure Sphere SDK to recognize the FTDI device as a valid programming and debugging interface. Instructions for doing this can be found in the [Azure Sphere documentation](https://docs.microsoft.com/en-us/azure-sphere/hardware/mt3620-mcu-program-debug-interface#using-the-ft_prog-gui-application).
+Note: It is necessary to program the FTDI EEPROM using the contents of the [MT3620_Standard_Interface.xml](https://github.com/Azure/azure-sphere-hardware-designs/tree/master/FTDI) configuration before the Azure Sphere SDK will recognize the FTDI device as a valid programming and debugging interface.
 
 Additionally, the [MT3620 RDB user guide](https://docs.microsoft.com/azure-sphere/hardware/mt3620-user-guide) provides a user-level overview of the board's main features. 
+
+## Change Log
+
+| Version | Notes                   |
+| :-------: | :----------------------- |
+| V1.6    |1. The 3.3V voltage regulator has been changed to a new part: TLV62569DBVR<br /><br />2. The RTC battery circuit has been changed such that when the main 3.3V supply is present, this will supply the RTC, even when a coin cell has been installed in the board's battery holder. When a battery is present and the main 3.3V supply is disconnected, the RTC will then be powered from the battery. Switch over between the main 3.3V supply and the battery happens automatically.<br /><br />3. The PMU_EN signal is now pulled low by default (R42). This change allows software to enable the MT3620 RTC low power mode. |
+| V1.0    | First design release. |
