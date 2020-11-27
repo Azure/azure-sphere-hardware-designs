@@ -328,3 +328,30 @@ ASALocalRun/
 
 # MFractors (Xamarin productivity tool) working folder 
 .mfractor/
+
+### Altium ###
+# Previews Folders
+**/__Previews/
+
+# History Folders
+**/History/*
+
+# Project Logs
+Project\ Logs*/
+
+# Project Outputs
+Project\ Outputs*/
+
+# Auto-conversion notices
+*.PcbDoc.htm
+
+# Access lock file for dbLib sources
+**/*.ldb
+
+Assembly\ Exports/
+*.rawProject\ Outputs*/
+*.BomDoc
+*.PrjPcbStructure
+*.Annotation
+*.SchDocPreview
+*.PcbDocPreview
