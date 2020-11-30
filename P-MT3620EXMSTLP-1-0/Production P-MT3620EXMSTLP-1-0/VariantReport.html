@@ -1,0 +1,1334 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 { 
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body { 
+			font-family : segoe ui;
+		}
+
+		td, th {  
+			padding: 0.5em;
+			text-align : left;
+		}
+		th { 
+			background-color : #EEEEEE;
+		
+		}
+		th.column1, td.column1 { 
+			width : 50%; 
+		}
+
+        th.column2, td.column2 {
+            width : 25%;
+        }
+
+		table { 
+			width : 100%; 
+            font-size: 0.9em;
+		}
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 5em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error { 
+			color : red;
+			font-weight : bold;
+		}	
+		tr.onmouseout_odd { 
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+			
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);		
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {	
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}	
+	</script><title>Variant Report</title>
+</head>
+<body onload=""><a href="dxpprocess://Client:SetupPreferences?Server=PCB|PageName=Reports" class="customize"><acronym title="dxpprocess://Client:SetupPreferences?Server=PCB|PageName=Reports">customize</acronym></a><h1>Variant Report</h1>
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">01/10/2020</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">17:37:54</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:00</td>
+</tr>
+</table><a name="IDNUKP3P0UJKSJO45SQCT5UBP0UDZWOCBOKX4R2GN44PWNEYQ5CO5"><h2>Variations</h2></a><a name="IDKEM0X4W4BDWLJLJ5D25ZJKPTUHWKQPIC454IQLDA4YA4PMIAMP"><table>
+<tr>
+<th class="column1">Physical</th>
+<th class="column2">Document</th>
+<th class="column3">Parameter Name</th>
+<th class="column4">Original Value</th>
+<th class="column5">NO_AdditionalHeader</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="background-color : #808080; color : #FFFFFF; font-weight : bolder;" class="column1">C16</td>
+<td style="background-color : #808080; color : #FFFFFF; font-weight : bolder;" class="column2">PowerSupply.SchDoc</td>
+<td style="background-color : #808080; color : #FFFFFF; font-weight : bolder;" class="column3"></td>
+<td style="background-color : #808080; color : #FFFFFF; font-weight : bolder;" class="column4">Fitted</td>
+<td style="background-color : #808080; color : #FFFFFF; font-weight : bolder;" class="column5">Not Fitted</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Capacitance</td>
+<td style="background-color : #F3F3E3" class="column4">33uF</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Case Code (Imperial)</td>
+<td style="background-color : #F3F3E3" class="column4">0805</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Case Code (Metric)</td>
+<td style="background-color : #F3F3E3" class="column4">2012</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Case/Package</td>
+<td style="background-color : #F3F3E3" class="column4">0805</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Category</td>
+<td style="background-color : #F3F3E3" class="column4">Ceramic Capacitors</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Comment</td>
+<td style="background-color : #F3F3E3" class="column4">33uF</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Component Kind</td>
+<td style="background-color : #F3F3E3" class="column4">Standard</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">ComponentLink1Description</td>
+<td style="background-color : #F3F3E3" class="column4">https://datasheet.ciiva.com/24216/c2012x5r1a336m125ac-264804-24216541.pdf?src-supplier=Mouser</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">ComponentLink1URL</td>
+<td style="background-color : #F3F3E3" class="column4">https://datasheet.ciiva.com/24216/c2012x5r1a336m125ac-264804-24216541.pdf?src-supplier=Mouser</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">ComponentLink2Description</td>
+<td style="background-color : #F3F3E3" class="column4">https://datasheet.ciiva.com/6259/tdkmlcccaprange-6259263.pdf?src-supplier=Digi-Key</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">ComponentLink2URL</td>
+<td style="background-color : #F3F3E3" class="column4">https://datasheet.ciiva.com/6259/tdkmlcccaprange-6259263.pdf?src-supplier=Digi-Key</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Composition</td>
+<td style="background-color : #F3F3E3" class="column4">Ceramic</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Depth</td>
+<td style="background-color : #F3F3E3" class="column4">1.25mm</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Description</td>
+<td style="background-color : #F3F3E3" class="column4">CAP CER 33UF 10V X5R 0805</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Dielectric</td>
+<td style="background-color : #F3F3E3" class="column4">X5R</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Dielectric Material</td>
+<td style="background-color : #F3F3E3" class="column4">Ceramic</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Footprint</td>
+<td style="background-color : #F3F3E3" class="column4">TDK_0805</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Height</td>
+<td style="background-color : #F3F3E3" class="column4">1.25mm</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Ibis Model</td>
+<td style="background-color : #F3F3E3" class="column4"></td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Lead Free</td>
+<td style="background-color : #F3F3E3" class="column4">Lead Free</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Length</td>
+<td style="background-color : #F3F3E3" class="column4">2mm</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Library Name</td>
+<td style="background-color : #F3F3E3" class="column4">TDK_Capacitor_C_0805.SchLib</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Library Reference</td>
+<td style="background-color : #F3F3E3" class="column4">33uF 0805 X5R 10V</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Manufacturer</td>
+<td style="background-color : #F3F3E3" class="column4">TDK</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Manufacturer Part Number</td>
+<td style="background-color : #F3F3E3" class="column4">C2012X5R1A336M125AC</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Max Operating Temperature</td>
+<td style="background-color : #F3F3E3" class="column4">85�C</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Min Operating Temperature</td>
+<td style="background-color : #F3F3E3" class="column4">-55�C</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Mount</td>
+<td style="background-color : #F3F3E3" class="column4">Surface Mount</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Package Quantity</td>
+<td style="background-color : #F3F3E3" class="column4">1</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Packaging</td>
+<td style="background-color : #F3F3E3" class="column4">Tape and Reel</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">PCB3D</td>
+<td style="background-color : #F3F3E3" class="column4"></td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Pin Info</td>
+<td style="background-color : #F3F3E3" class="column4"></td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Pricing 1</td>
+<td style="background-color : #F3F3E3" class="column4">1=1.03000, 10=0.78700, 50=0.65340, 100=0.56270, 500=0.43560, 1000=0.37510 (USD)</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">REACH SVHC</td>
+<td style="background-color : #F3F3E3" class="column4">No SVHC</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">RoHS</td>
+<td style="background-color : #F3F3E3" class="column4">Yes</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Signal Integrity</td>
+<td style="background-color : #F3F3E3" class="column4"></td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Simulation</td>
+<td style="background-color : #F3F3E3" class="column4"></td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Stock 1</td>
+<td style="background-color : #F3F3E3" class="column4">30620</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Supplier 1</td>
+<td style="background-color : #F3F3E3" class="column4">Digi-Key</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Supplier Part Number 1</td>
+<td style="background-color : #F3F3E3" class="column4">445-8238-1-ND</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Termination</td>
+<td style="background-color : #F3F3E3" class="column4">SMD/SMT</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Thickness</td>
+<td style="background-color : #F3F3E3" class="column4">0.057inch</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Tolerance</td>
+<td style="background-color : #F3F3E3" class="column4">20%</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Voltage Rating</td>
+<td style="background-color : #F3F3E3" class="column4">10V</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Voltage Rating (DC)</td>
+<td style="background-color : #F3F3E3" class="column4">10V</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Weight</td>
+<td style="background-color : #F3F3E3" class="column4">0.000194oz</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Width</td>
+<td style="background-color : #F3F3E3" class="column4">0.049inch</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="background-color : #808080; color : #FFFFFF; font-weight : bolder;" class="column1">J3</td>
+<td style="background-color : #808080; color : #FFFFFF; font-weight : bolder;" class="column2">TopLevelBlock.SchDoc</td>
+<td style="background-color : #808080; color : #FFFFFF; font-weight : bolder;" class="column3"></td>
+<td style="background-color : #808080; color : #FFFFFF; font-weight : bolder;" class="column4">Fitted</td>
+<td style="background-color : #808080; color : #FFFFFF; font-weight : bolder;" class="column5">Not Fitted</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Category</td>
+<td style="background-color : #F3F3E3" class="column4">Connectors, Interconnects</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Color</td>
+<td style="background-color : #F3F3E3" class="column4">Black</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Comment</td>
+<td style="background-color : #F3F3E3" class="column4">MOLEX-0022284020</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Component Kind</td>
+<td style="background-color : #F3F3E3" class="column4">Standard</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">ComponentLink1Description</td>
+<td style="background-color : #F3F3E3" class="column4">http://www.molex.com/pdm_docs/sd/022284020_sd.pdf</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">ComponentLink1URL</td>
+<td style="background-color : #F3F3E3" class="column4">http://www.molex.com/pdm_docs/sd/022284020_sd.pdf</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Connector Type</td>
+<td style="background-color : #F3F3E3" class="column4">Header, Unshrouded, Breakaway</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Contact Finish</td>
+<td style="background-color : #F3F3E3" class="column4">Tin</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Contact Finish Thickness</td>
+<td style="background-color : #F3F3E3" class="column4">100�in (2.54�m)</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Contact Mating Length</td>
+<td style="background-color : #F3F3E3" class="column4">0.240" (6.10mm)</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Contact Type</td>
+<td style="background-color : #F3F3E3" class="column4">Male Pin</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Description</td>
+<td style="background-color : #F3F3E3" class="column4">CONN HEADER 2POS .100 VERT TIN</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Fastening Type</td>
+<td style="background-color : #F3F3E3" class="column4">-</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Features</td>
+<td style="background-color : #F3F3E3" class="column4">-</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Footprint</td>
+<td style="background-color : #F3F3E3" class="column4">0022284020</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Ibis Model</td>
+<td style="background-color : #F3F3E3" class="column4"></td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Library Name</td>
+<td style="background-color : #F3F3E3" class="column4">Molex.SchLib</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Library Reference</td>
+<td style="background-color : #F3F3E3" class="column4">MOLEX-0022284020</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Manufacturer</td>
+<td style="background-color : #F3F3E3" class="column4">Molex, LLC</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Manufacturer Part Number</td>
+<td style="background-color : #F3F3E3" class="column4">0022284020</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Mounting Type</td>
+<td style="background-color : #F3F3E3" class="column4">Through Hole</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Number of Positions</td>
+<td style="background-color : #F3F3E3" class="column4">2</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Number of Positions Loaded</td>
+<td style="background-color : #F3F3E3" class="column4">All</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Number of Rows</td>
+<td style="background-color : #F3F3E3" class="column4">1</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Packaging</td>
+<td style="background-color : #F3F3E3" class="column4">Bulk</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">PCB3D</td>
+<td style="background-color : #F3F3E3" class="column4"></td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Pin Info</td>
+<td style="background-color : #F3F3E3" class="column4"></td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Pitch</td>
+<td style="background-color : #F3F3E3" class="column4">0.100" (2.54mm)</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Pricing 1</td>
+<td style="background-color : #F3F3E3" class="column4">1=0.12, 10=0.108, 25=0.0808, 50=0.0692, 100=0.0668, 250=0.0576, 500=0.0553 (GBP)</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">RoHS</td>
+<td style="background-color : #F3F3E3" class="column4">RoHS Compliant</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Row Spacing</td>
+<td style="background-color : #F3F3E3" class="column4">-</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Signal Integrity</td>
+<td style="background-color : #F3F3E3" class="column4"></td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Simulation</td>
+<td style="background-color : #F3F3E3" class="column4"></td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Stock 1</td>
+<td style="background-color : #F3F3E3" class="column4">10077</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Supplier 1</td>
+<td style="background-color : #F3F3E3" class="column4">Digi-Key</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Supplier Part Number 1</td>
+<td style="background-color : #F3F3E3" class="column4">WM50014-02-ND</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Termination</td>
+<td style="background-color : #F3F3E3" class="column4">Solder</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="background-color : #808080; color : #FFFFFF; font-weight : bolder;" class="column1">J9</td>
+<td style="background-color : #808080; color : #FFFFFF; font-weight : bolder;" class="column2">MT3620AvnetModule.SchDoc</td>
+<td style="background-color : #808080; color : #FFFFFF; font-weight : bolder;" class="column3"></td>
+<td style="background-color : #808080; color : #FFFFFF; font-weight : bolder;" class="column4">Fitted</td>
+<td style="background-color : #808080; color : #FFFFFF; font-weight : bolder;" class="column5">Not Fitted</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Category</td>
+<td style="background-color : #F3F3E3" class="column4">Connectors, Interconnects</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Color</td>
+<td style="background-color : #F3F3E3" class="column4">Black</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Comment</td>
+<td style="background-color : #F3F3E3" class="column4">MOLEX-0022284030</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Component Kind</td>
+<td style="background-color : #F3F3E3" class="column4">Standard</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">ComponentLink1Description</td>
+<td style="background-color : #F3F3E3" class="column4">http://www.molex.com/pdm_docs/sd/022284030_sd.pdf</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">ComponentLink1URL</td>
+<td style="background-color : #F3F3E3" class="column4">http://www.molex.com/pdm_docs/sd/022284030_sd.pdf</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Connector Type</td>
+<td style="background-color : #F3F3E3" class="column4">Header, Unshrouded, Breakaway</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Contact Finish</td>
+<td style="background-color : #F3F3E3" class="column4">Tin</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Contact Finish Thickness</td>
+<td style="background-color : #F3F3E3" class="column4">100�in (2.54�m)</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Contact Mating Length</td>
+<td style="background-color : #F3F3E3" class="column4">0.240" (6.10mm)</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Contact Type</td>
+<td style="background-color : #F3F3E3" class="column4">Male Pin</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Description</td>
+<td style="background-color : #F3F3E3" class="column4">CONN HEADER 3POS .100 VERT TIN</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Fastening Type</td>
+<td style="background-color : #F3F3E3" class="column4">-</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Features</td>
+<td style="background-color : #F3F3E3" class="column4">-</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Footprint</td>
+<td style="background-color : #F3F3E3" class="column4">0022284030</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Ibis Model</td>
+<td style="background-color : #F3F3E3" class="column4"></td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Library Name</td>
+<td style="background-color : #F3F3E3" class="column4">Molex.SchLib</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Library Reference</td>
+<td style="background-color : #F3F3E3" class="column4">MOLEX-0022284030</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Manufacturer</td>
+<td style="background-color : #F3F3E3" class="column4">Molex, LLC</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Manufacturer Part Number</td>
+<td style="background-color : #F3F3E3" class="column4">0022284030</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Mounting Type</td>
+<td style="background-color : #F3F3E3" class="column4">Through Hole</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Number of Positions</td>
+<td style="background-color : #F3F3E3" class="column4">3</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Number of Positions Loaded</td>
+<td style="background-color : #F3F3E3" class="column4">All</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Number of Rows</td>
+<td style="background-color : #F3F3E3" class="column4">1</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Packaging</td>
+<td style="background-color : #F3F3E3" class="column4">Bulk</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">PCB3D</td>
+<td style="background-color : #F3F3E3" class="column4"></td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Pin Info</td>
+<td style="background-color : #F3F3E3" class="column4"></td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Pitch</td>
+<td style="background-color : #F3F3E3" class="column4">0.100" (2.54mm)</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Pricing 1</td>
+<td style="background-color : #F3F3E3" class="column4">1=0.12, 10=0.115, 25=0.0984, 50=0.086, 100=0.0799, 250=0.07068, 500=0.0676 (GBP)</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">RoHS</td>
+<td style="background-color : #F3F3E3" class="column4">RoHS Compliant</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Row Spacing</td>
+<td style="background-color : #F3F3E3" class="column4">-</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Signal Integrity</td>
+<td style="background-color : #F3F3E3" class="column4"></td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Simulation</td>
+<td style="background-color : #F3F3E3" class="column4"></td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Stock 1</td>
+<td style="background-color : #F3F3E3" class="column4">4665</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Supplier 1</td>
+<td style="background-color : #F3F3E3" class="column4">Digi-Key</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Supplier Part Number 1</td>
+<td style="background-color : #F3F3E3" class="column4">WM50014-03-ND</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Termination</td>
+<td style="background-color : #F3F3E3" class="column4">Solder</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="background-color : #808080; color : #FFFFFF; font-weight : bolder;" class="column1">J11</td>
+<td style="background-color : #808080; color : #FFFFFF; font-weight : bolder;" class="column2">STM32L031.SchDoc</td>
+<td style="background-color : #808080; color : #FFFFFF; font-weight : bolder;" class="column3"></td>
+<td style="background-color : #808080; color : #FFFFFF; font-weight : bolder;" class="column4">Fitted</td>
+<td style="background-color : #808080; color : #FFFFFF; font-weight : bolder;" class="column5">Not Fitted</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Category</td>
+<td style="background-color : #F3F3E3" class="column4">Connectors, Interconnects</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Color</td>
+<td style="background-color : #F3F3E3" class="column4">Black</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Comment</td>
+<td style="background-color : #F3F3E3" class="column4">MOLEX-0022284040</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Component Kind</td>
+<td style="background-color : #F3F3E3" class="column4">Standard</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">ComponentLink1Description</td>
+<td style="background-color : #F3F3E3" class="column4">http://www.molex.com/pdm_docs/sd/022284040_sd.pdf</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">ComponentLink1URL</td>
+<td style="background-color : #F3F3E3" class="column4">http://www.molex.com/pdm_docs/sd/022284040_sd.pdf</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Connector Type</td>
+<td style="background-color : #F3F3E3" class="column4">Header, Unshrouded, Breakaway</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Contact Finish</td>
+<td style="background-color : #F3F3E3" class="column4">Tin</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Contact Finish Thickness</td>
+<td style="background-color : #F3F3E3" class="column4">100�in (2.54�m)</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Contact Mating Length</td>
+<td style="background-color : #F3F3E3" class="column4">0.240" (6.10mm)</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Contact Type</td>
+<td style="background-color : #F3F3E3" class="column4">Male Pin</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Description</td>
+<td style="background-color : #F3F3E3" class="column4">CONN HEADER 4POS .100 VERT TIN</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Fastening Type</td>
+<td style="background-color : #F3F3E3" class="column4">-</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Features</td>
+<td style="background-color : #F3F3E3" class="column4">-</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Footprint</td>
+<td style="background-color : #F3F3E3" class="column4">0022284040</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Ibis Model</td>
+<td style="background-color : #F3F3E3" class="column4"></td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Library Name</td>
+<td style="background-color : #F3F3E3" class="column4">Molex.SchLib</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Library Reference</td>
+<td style="background-color : #F3F3E3" class="column4">MOLEX-0022284040</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Manufacturer</td>
+<td style="background-color : #F3F3E3" class="column4">Molex, LLC</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Manufacturer Part Number</td>
+<td style="background-color : #F3F3E3" class="column4">0022284040</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Mounting Type</td>
+<td style="background-color : #F3F3E3" class="column4">Through Hole</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Number of Positions</td>
+<td style="background-color : #F3F3E3" class="column4">4</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Number of Positions Loaded</td>
+<td style="background-color : #F3F3E3" class="column4">All</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Number of Rows</td>
+<td style="background-color : #F3F3E3" class="column4">1</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Packaging</td>
+<td style="background-color : #F3F3E3" class="column4">Bulk</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">PCB3D</td>
+<td style="background-color : #F3F3E3" class="column4"></td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Pin Info</td>
+<td style="background-color : #F3F3E3" class="column4"></td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Pitch</td>
+<td style="background-color : #F3F3E3" class="column4">0.100" (2.54mm)</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Pricing 1</td>
+<td style="background-color : #F3F3E3" class="column4">1=0.15, 10=0.144, 25=0.1228, 50=0.1074, 100=0.0999, 250=0.08836, 500=0.0845 (GBP)</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">RoHS</td>
+<td style="background-color : #F3F3E3" class="column4">RoHS Compliant</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Row Spacing</td>
+<td style="background-color : #F3F3E3" class="column4">-</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Signal Integrity</td>
+<td style="background-color : #F3F3E3" class="column4"></td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Simulation</td>
+<td style="background-color : #F3F3E3" class="column4"></td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Stock 1</td>
+<td style="background-color : #F3F3E3" class="column4">1330</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Supplier 1</td>
+<td style="background-color : #F3F3E3" class="column4">Digi-Key</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Supplier Part Number 1</td>
+<td style="background-color : #F3F3E3" class="column4">WM50014-04-ND</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="background-color : #FFFFFF" class="column1"></td>
+<td style="background-color : #FFFFFF" class="column2"></td>
+<td style="background-color : #F3F3E3" class="column3">Termination</td>
+<td style="background-color : #F3F3E3" class="column4">Solder</td>
+<td style="background-color : #F3F3E3" class="column5"></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>
