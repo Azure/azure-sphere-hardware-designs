@@ -7,6 +7,7 @@ This repository houses Microsoft-created hardware designs for the Azure Sphere p
 - P-MT3620RDB-1-0 - Version 1.0 of the MT3620 Reference Development Board (RDB)
 - P-MT3620RDB-1-6 - Version 1.6 of the MT3620 Reference Development Board (RDB)
 - P-FTINT-1-1 - Version 1.1 of standalone FTDI programming and debug interface board
+- P-MT3620EXMSTLP-1-0 - Version 1.0 of the Device To Cloud - External MCU, Low Power reference design
 
 # Contributing
 
