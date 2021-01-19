@@ -1,6 +1,10 @@
 # Azure Sphere Hardware Designs
 
-This repository houses Microsoft-created hardware designs for the Azure Sphere product. See https://docs.microsoft.com/en-us/azure-sphere/hardware/hardware-manufacturing-overview for more information.
+This repository houses hardware designs for the Azure Sphere product that are created and maintained by Microsoft. See https://docs.microsoft.com/en-us/azure-sphere/hardware/hardware-manufacturing-overview for more information on hardware design and manufacturing guidance for Azure Sphere.
+
+You may also be interested in:
+- https://github.com/Azure/azure-sphere-samples/ - maintained software samples for Azure Sphere
+- https://github.com/Azure/azure-sphere-gallery/ - gallery of further unmaintained content from the Azure Sphere team
 
 # Project List
 
