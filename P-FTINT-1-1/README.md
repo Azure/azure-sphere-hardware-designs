@@ -6,7 +6,7 @@ This Altium Project contains a design for a standalone FTDI-based programming an
 
 The connections to an Azure Sphere target device are exposed as pin headers; flying jumper leads or an appropriate cable assembly is required to connect with the target device. The SWD connector pinout follows that of the standard 10-pin ARM Cortex SWD connector. The 10-pin 0.1-inch pitch connectors for Recovery, Service and Debug UARTs are compatible with standard 10-pin IDC ribbon cables or spring-pin assemblies like the [Tag-Connect TC2050](http://www.tag-connect.com/TC2050-IDC-NL).
 
-To reduce assembly complexity this board uses FTDI's off-the-shelf [FT4232H-56Q Mini-Module](https://www.ftdichip.com/Products/Modules/DevelopmentModules.htm#FT4232H-56_Mini). The connectors, tri-state buffer IC, and passive footprints on the board have been selected to make hand-soldering easier.
+To reduce assembly complexity this board uses FTDI's off-the-shelf [FT4232H-56Q Mini-Module](https://ftdichip.com/wp-content/uploads/2020/07/DS_FT4232H-56Q_Mini_Module.pdf). The connectors, tri-state buffer IC, and passive footprints on the board have been selected to make hand-soldering easier.
 
 ## Usage Notes
 
