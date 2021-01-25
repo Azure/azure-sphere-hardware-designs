@@ -4,7 +4,7 @@ This repository houses hardware designs for the Azure Sphere product that are cr
 
 You may also be interested in:
 - https://github.com/Azure/azure-sphere-samples/ - maintained software samples for Azure Sphere
-- https://github.com/Azure/azure-sphere-gallery/ - gallery of further unmaintained content from the Azure Sphere team
+- https://github.com/Azure/azure-sphere-gallery/ - gallery of further unmaintained content from Microsoft
 
 # Project List
 
