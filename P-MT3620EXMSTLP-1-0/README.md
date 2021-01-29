@@ -110,12 +110,6 @@ On-board sense resistors can be added to the power rail and the differential vol
 | V2      | RTC 3.3V that is always ON |R3 - 100R |   TP1 and TP2 |
 | V3 | MT3620 3.3V that is switched OFF in low power (RTC modes) | R27 - 0.1R |TP5 and TP6 |
 
-## Change Log
+## Compatibility Note
 
-| Version | Notes                   |
-| :-------: | :----------------------- |
-| V1.0    | First design release. |
-
-
-
-
+The Avnet module V1 is used in this design. This design is also compatible with the V2 of the Avnet module - see considerations listed on Page 3 of Schematic.
