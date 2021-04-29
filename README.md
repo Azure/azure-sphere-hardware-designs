@@ -8,10 +8,11 @@ You may also be interested in:
 
 # Project List
 
-- P-MT3620RDB-1-0 - Version 1.0 of the MT3620 Reference Development Board (RDB)
-- P-MT3620RDB-1-6 - Version 1.6 of the MT3620 Reference Development Board (RDB)
-- P-FTINT-1-1 - Version 1.1 of standalone FTDI programming and debug interface board
-- P-MT3620EXMSTLP-1-0 - Version 1.0 of the Device To Cloud - External MCU, Low Power reference design
+- [P-MT3620RDB-1-0](https://github.com/Azure/azure-sphere-hardware-designs/tree/master/P-MT3620RDB-1-0) - Version 1.0 of the MT3620 Reference Development Board (RDB)
+- [P-MT3620RDB-1-6](https://github.com/Azure/azure-sphere-hardware-designs/tree/master/P-MT3620RDB-1-6) - Version 1.6 of the MT3620 Reference Development Board (RDB)
+- [P-MT3620RDB-1-7](https://github.com/Azure/azure-sphere-hardware-designs/tree/master/P-MT3620RDB-1-7) - Version 1.7 of the MT3620 Reference Development Board (RDB)
+- [P-FTINT-1-1](https://github.com/Azure/azure-sphere-hardware-designs/tree/master/P-FTINT-1-1) - Version 1.1 of standalone FTDI programming and debug interface board
+- [P-MT3620EXMSTLP-1-0](https://github.com/Azure/azure-sphere-hardware-designs/tree/master/P-MT3620EXMSTLP-1-0) - Version 1.0 of the Device To Cloud - External MCU, Low Power reference design
 
 # Contributing
 

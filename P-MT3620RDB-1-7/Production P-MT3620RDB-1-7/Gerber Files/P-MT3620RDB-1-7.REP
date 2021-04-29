@@ -1,0 +1,654 @@
+*************************************************************
+FileName = P-MT3620RDB-1-7.GBR
+AutoAperture = True
+*************************************************************
+Generating : Mechanical 1
+      File : P-MT3620RDB-1-7.GM1
+
+    Adding Layer      : Mechanical 1
+
+
+Used DCodes :
+*************************************************************
+
+*************************************************************
+Generating : Mechanical 13
+      File : P-MT3620RDB-1-7.GM13
+
+    Adding Layer      : Mechanical 13
+
+
+Used DCodes :
+    D17
+    D215
+*************************************************************
+
+*************************************************************
+Generating : Mechanical 15
+      File : P-MT3620RDB-1-7.GM15
+
+    Adding Layer      : Mechanical 15
+
+
+Used DCodes :
+    D17
+    D215
+*************************************************************
+
+*************************************************************
+Generating : Graphics Top (29)
+      File : P-MT3620RDB-1-7.GM29
+
+    Adding Layer      : Graphics Top (29)
+
+
+Used DCodes :
+    D10
+    D12
+    D14
+    D15
+    D16
+    D17
+    D20
+*************************************************************
+
+*************************************************************
+Generating : Graphics Bottom (30)
+      File : P-MT3620RDB-1-7.GM30
+
+    Adding Layer      : Graphics Bottom (30)
+
+
+Used DCodes :
+    D11
+    D16
+*************************************************************
+
+*************************************************************
+Generating : Board Outline (31)
+      File : P-MT3620RDB-1-7.GM31
+
+    Adding Layer      : Board Outline (31)
+
+
+Used DCodes :
+    D17
+*************************************************************
+
+*************************************************************
+Generating : Keep-Out Layer
+      File : P-MT3620RDB-1-7.GKO
+
+    Adding Layer      : Keep-Out Layer
+
+
+Used DCodes :
+    D216
+*************************************************************
+
+*************************************************************
+Generating : Bottom Overlay
+      File : P-MT3620RDB-1-7.GBO
+
+    Adding Layer      : Bottom Overlay
+
+
+Used DCodes :
+    D11
+    D12
+    D13
+    D14
+    D16
+    D17
+    D19
+    D213
+    D214
+*************************************************************
+
+*************************************************************
+Generating : Bottom Paste
+      File : P-MT3620RDB-1-7.GBP
+
+    Adding Layer      : Bottom Paste
+
+    Adding Layer      : Solder Side
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D24
+    D29
+    D54
+    D117
+    D151
+    D153
+    D154
+    D155
+    D156
+    D157
+    D158
+    D163
+    D164
+    D165
+    D166
+    D168
+    D169
+    D170
+    D171
+    D172
+    D173
+    D175
+    D176
+    D177
+    D178
+    D207
+    D208
+    D209
+    D210
+    D211
+    D212
+*************************************************************
+
+*************************************************************
+Generating : Bottom Solder
+      File : P-MT3620RDB-1-7.GBS
+
+    Adding Layer      : Bottom Solder
+
+    Adding Layer      : Solder Side
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D70
+    D73
+    D74
+    D76
+    D100
+    D109
+    D110
+    D111
+    D112
+    D113
+    D114
+    D115
+    D116
+    D179
+    D180
+    D181
+    D182
+    D183
+    D184
+    D185
+    D186
+    D187
+    D188
+    D189
+    D190
+    D191
+    D192
+    D193
+    D194
+    D195
+    D196
+    D197
+    D198
+    D199
+    D200
+    D201
+    D202
+    D203
+    D204
+    D205
+    D206
+*************************************************************
+
+*************************************************************
+Generating : Top Solder
+      File : P-MT3620RDB-1-7.GTS
+
+    Adding Layer      : Top Solder
+
+    Adding Layer      : Component Side
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D17
+    D63
+    D64
+    D65
+    D66
+    D67
+    D68
+    D69
+    D70
+    D71
+    D72
+    D73
+    D74
+    D75
+    D76
+    D77
+    D78
+    D79
+    D80
+    D81
+    D82
+    D83
+    D84
+    D85
+    D86
+    D87
+    D88
+    D89
+    D90
+    D91
+    D92
+    D93
+    D94
+    D95
+    D96
+    D97
+    D98
+    D99
+    D100
+    D101
+    D102
+    D103
+    D104
+    D105
+    D106
+    D107
+    D108
+    D109
+    D110
+    D111
+    D112
+    D113
+    D114
+    D115
+    D116
+*************************************************************
+
+*************************************************************
+Generating : Top Paste
+      File : P-MT3620RDB-1-7.GTP
+
+    Adding Layer      : Top Paste
+
+    Adding Layer      : Component Side
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D12
+    D21
+    D22
+    D23
+    D24
+    D25
+    D26
+    D27
+    D28
+    D29
+    D30
+    D31
+    D32
+    D33
+    D34
+    D35
+    D36
+    D37
+    D38
+    D39
+    D40
+    D41
+    D42
+    D43
+    D44
+    D45
+    D46
+    D47
+    D48
+    D49
+    D50
+    D51
+    D52
+    D53
+    D54
+    D55
+    D56
+    D57
+    D58
+    D59
+    D60
+    D61
+    D62
+*************************************************************
+
+*************************************************************
+Generating : Top Overlay
+      File : P-MT3620RDB-1-7.GTO
+
+    Adding Layer      : Top Overlay
+
+
+Used DCodes :
+    D10
+    D11
+    D12
+    D13
+    D14
+    D15
+    D16
+    D17
+    D18
+    D19
+    D20
+*************************************************************
+
+*************************************************************
+Generating : Top Pad Master
+      File : P-MT3620RDB-1-7.GPT
+
+    Adding Layer      : Component Side
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D24
+    D25
+    D26
+    D28
+    D29
+    D30
+    D31
+    D32
+    D33
+    D34
+    D35
+    D36
+    D37
+    D38
+    D39
+    D40
+    D41
+    D42
+    D43
+    D44
+    D45
+    D46
+    D47
+    D48
+    D49
+    D50
+    D51
+    D52
+    D53
+    D54
+    D55
+    D56
+    D57
+    D58
+    D59
+    D60
+    D61
+    D62
+    D117
+    D118
+    D119
+    D130
+    D131
+    D132
+    D133
+    D134
+    D135
+    D136
+    D137
+*************************************************************
+
+*************************************************************
+Generating : Bottom Pad Master
+      File : P-MT3620RDB-1-7.GPB
+
+    Adding Layer      : Solder Side
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D24
+    D29
+    D54
+    D117
+    D118
+    D130
+    D131
+    D132
+    D133
+    D134
+    D135
+    D136
+    D137
+    D151
+    D152
+    D153
+    D154
+    D155
+    D156
+    D157
+    D158
+    D159
+    D160
+    D161
+    D162
+    D163
+    D164
+    D165
+    D166
+    D167
+    D168
+    D169
+    D170
+    D171
+    D172
+    D173
+    D174
+    D175
+    D176
+    D177
+    D178
+*************************************************************
+
+*************************************************************
+Generating : Solder Side
+      File : P-MT3620RDB-1-7.GBL
+
+    Adding Layer      : Solder Side
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D12
+    D14
+    D15
+    D16
+    D24
+    D29
+    D54
+    D117
+    D118
+    D120
+    D121
+    D122
+    D123
+    D125
+    D130
+    D131
+    D132
+    D133
+    D134
+    D135
+    D136
+    D137
+    D138
+    D139
+    D151
+    D152
+    D153
+    D154
+    D155
+    D156
+    D157
+    D158
+    D159
+    D160
+    D161
+    D162
+    D163
+    D164
+    D165
+    D166
+    D167
+    D168
+    D169
+    D170
+    D171
+    D172
+    D173
+    D174
+    D175
+    D176
+    D177
+    D178
+*************************************************************
+
+*************************************************************
+Generating : Power Plane
+      File : P-MT3620RDB-1-7.GP2
+
+    Adding Layer      : Power Plane
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D125
+    D141
+    D142
+    D143
+    D144
+    D145
+    D146
+    D147
+    D149
+    D150
+*************************************************************
+
+*************************************************************
+Generating : Ground Plane
+      File : P-MT3620RDB-1-7.GP1
+
+    Adding Layer      : Ground Plane
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D125
+    D140
+    D141
+    D142
+    D143
+    D144
+    D145
+    D146
+    D147
+    D148
+*************************************************************
+
+*************************************************************
+Generating : Component Side
+      File : P-MT3620RDB-1-7.GTL
+
+    Adding Layer      : Component Side
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D11
+    D12
+    D14
+    D15
+    D16
+    D24
+    D25
+    D26
+    D28
+    D29
+    D30
+    D31
+    D32
+    D33
+    D34
+    D35
+    D36
+    D37
+    D38
+    D39
+    D40
+    D41
+    D42
+    D43
+    D44
+    D45
+    D46
+    D47
+    D48
+    D49
+    D50
+    D51
+    D52
+    D53
+    D54
+    D55
+    D56
+    D57
+    D58
+    D59
+    D60
+    D61
+    D62
+    D117
+    D118
+    D119
+    D120
+    D121
+    D122
+    D123
+    D124
+    D125
+    D126
+    D127
+    D128
+    D129
+    D130
+    D131
+    D132
+    D133
+    D134
+    D135
+    D136
+    D137
+    D138
+    D139
+*************************************************************
+
