@@ -43,13 +43,13 @@ This project contains the design files for the Device To Cloud - External MCU, L
 - Altium P-MT3620EXMSTLP-1-0  folder contains the Altium Designer schematics, PCB layout, and supporting project files.
   - FTDIProgrammer.Harness      describes FTDI programmer signal harness between multiple schematic sheets.
   - FTDIProgrammer.SchDoc       describes FTDI programming interface.
-  - MT3620AvnetModule.SchDoc    describes the Avnet module interface.     
-  - P-MT3620EXMSTLP-1-0.OutJob  describes the PCB output generation structure.   
+  - MT3620AvnetModule.SchDoc    describes the Avnet module interface.
+  - P-MT3620EXMSTLP-1-0.OutJob  describes the PCB output generation structure.
   - P-MT3620EXMSTLP-1-0.PcbDoc  describes the PCB design.
   - P-MT3620EXMSTLP-1-0.PrjPcb  is the Hardware design project file for Altium.
-  - PowerSupply.SchDoc          describes the power management unit.       
-  - STM32L031.SchDoc               
-  - TopLevelBlock.SchDoc          describes the top level block diagram for the hardware design and schematic flow.   
+  - PowerSupply.SchDoc          describes the power management unit.
+  - STM32L031.SchDoc
+  - TopLevelBlock.SchDoc          describes the top level block diagram for the hardware design and schematic flow.
 - Production P-MT3620EXMSTLP-1-0  folder contains the gerber, drill, and pick and place data files, along with a detailed variant report file.
    - Gerber                       folder contains the files needed for PCB manufacture.
    - NC Drill                     folder contains the files needed for PCB manufacture.
@@ -70,28 +70,28 @@ To run the [DeviceToCloud reference solution](https://github.com/Azure/azure-sph
 - Update the STM32 application, [McuSoda](https://github.com/Azure/azure-sphere-samples/tree/master/Samples/DeviceToCloud/ExternalMcuLowPower/McuSoda), to work with the hardware reference solution.
 
    1. Open the solution in the STM32 Cube IDE, and open the file McuSoda.ioc:
-      
+
       [ ![hardware setup](./media/Picture1.png) ](./media/Picture1.png#lightbox)
-   
+
    1. You may at this point be prompted to migrate the project to a newer firmware version. Don’t do this, just click **Continue**. You should see the following:
-   
+
       [ ![hardware setup](./media/Picture2.png) ](./media/Picture2.png#lightbox)
 
    1. Click on **PA5** and select **ADC_IN5**.
-   
+
       [ ![hardware setup](./media/Picture3.png) ](./media/Picture3.png#lightbox)
 
    1. Click on **PA4** then  click on **Reset_State**
    1. Right-click on **PA5**, click on **Enter user label** and enter “ADC_BATTERY_LVL”. You should see the following:
-   
+
       [ ![hardware setup](./media/Picture4.png) ](./media/Picture4.png#lightbox)
 
    1. In the left panel, expand the **Analog** section and double click on **ADC**.
-   
+
       [ ![hardware setup](./media/Picture5.png) ](./media/Picture5.png#lightbox)
 
    1. In the configuration pane select the **Parameter Settings** tab. The settings should match the following:
-   
+
         [ ![hardware setup](./media/Picture6.png) ](./media/Picture6.png#lightbox)
 
    1. Press the Ctrl-S to save the settings then rebuild and deploy the application.
@@ -99,7 +99,7 @@ To run the [DeviceToCloud reference solution](https://github.com/Azure/azure-sph
 - Where the [Build and deploy the MCU app](https://github.com/Azure/azure-sphere-samples/blob/master/Samples/DeviceToCloud/ExternalMcuLowPower/BuildMcuToCloud.md#build-and-deploy-the-mcu-app) instructions say to connect development boards to the PC, instead connect the custom hardware as described and illustrated above.
 
 ## Current monitoring on hardware
-The hardware provides headers and current sense resistors for monitoring the current consumption of the MT3620 chip.  
+The hardware provides headers and current sense resistors for monitoring the current consumption of the MT3620 chip.
 On-board sense resistors can be added to the power rail and the differential voltage across it can be measured using a Voltmeter on the available test points.
 
 [![current monitoring hardware](./media/PowerMeasurement.png)](./media/PowerMeasurement.png#lightbox)
@@ -113,3 +113,7 @@ On-board sense resistors can be added to the power rail and the differential vol
 ## Compatibility Note
 
 The Avnet module V1 is used in this design. This design is also compatible with the V2 of the Avnet module - see considerations listed on Page 3 of Schematic.
+
+## Wakeup and Reset
+
+When the chip enters PowerDown mode, the MT3620 reset button on the board has no effect, i.e. pressing the reset button does not reset or wake the chip from PowerDown mode. This shortcoming has been addressed in the latest version of the MT3620 RDB (v1.7), but this design has not been updated with those changes. See the [RDB v1.7 design](https://github.com/Azure/azure-sphere-hardware-designs/tree/master/P-MT3620RDB-1-7) for more details.
