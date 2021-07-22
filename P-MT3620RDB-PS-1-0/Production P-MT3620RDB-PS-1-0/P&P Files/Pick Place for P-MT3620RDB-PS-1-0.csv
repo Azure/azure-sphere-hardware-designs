@@ -1,0 +1,70 @@
+Altium Designer Pick and Place Locations,,,,,,,
+.\Pick Place for P-MT3620RDB-PS-1-0.csv,,,,,,,
+,,,,,,,
+========================================================================================================================,,,,,,,
+File Design Information:,,,,,,,
+,,,,,,,
+Date:       28/05/21,,,,,,,
+Time:       11:56,,,,,,,
+Revision:   e14b9ffca33ca37a1ddefcd68433b23cac0f507e,,,,,,,
+Variant:    No variations,,,,,,,
+Units used: mm,,,,,,,
+,,,,,,,
+Designator,Comment,Layer,Footprint,Center-X(mm),Center-Y(mm),Rotation,Description
+R15,10K,BottomLayer,R0603,23.3,28.7,90,Res General Purpose Thick Film 0603 10K Ohm 1% 1/10W ±100ppm/°C Molded SMD Paper T/R
+R12,4K7,BottomLayer,R0603,25.7,28.7,90,RES SMD 4.7K OHM 1% 1/10W 0603
+R2,10R,TopLayer,R0603,23.6,8.13,90,"YAGEO (PHYCOMP) - RC0603FR-0710RL - RES, THICK FILM, 10R, 1%, 0.1W, 0603"
+R1,10R,TopLayer,R0603,25.75,8.14,90,"YAGEO (PHYCOMP) - RC0603FR-0710RL - RES, THICK FILM, 10R, 1%, 0.1W, 0603"
+D1,PGB102ST23WRHF,BottomLayer,SOT95P245X110-3N,24.7,5.9,270,Tvs Diode 24V 150V SOT23-3
+C10,0.1uF,BottomLayer,C0603,25.71,24.1,270,CL10 Series 0603 0.1 uF 50 V ±10% Tolerance X7R Multilayer Ceramic Capacitor
+D2,Green,TopLayer,Rohm_SML-D12_Green,23.135,19.2201,90,"ROHM - SML-D12P8WT86 - LED, EXCELED, Green, SMD, 0603, 20 mA, 2.2 V, 560 nm"
+C13,3.3uF,BottomLayer,C0603,20.91,24.11,270,CAP CER 3.3UF 10V X5R 0603
+C1,4.7UF,BottomLayer,C0603_TANT,39.71,8.2,0,"AVX - F981A475MMA - Surface Mount Tantalum Capacitor, 4.7 µF, 10 V, 0603 [1608 Metric], F98 Series, ± 20%, -55 °C"
+C2,4.7UF,BottomLayer,C0603_TANT,33.61,8.2,180,"AVX - F981A475MMA - Surface Mount Tantalum Capacitor, 4.7 µF, 10 V, 0603 [1608 Metric], F98 Series, ± 20%, -55 °C"
+C3,0.1uF,BottomLayer,C0603,39.61,5.6,0,CL10 Series 0603 0.1 uF 50 V ±10% Tolerance X7R Multilayer Ceramic Capacitor
+C4,0.1uF,BottomLayer,C0603,33.61,5.6,0,CL10 Series 0603 0.1 uF 50 V ±10% Tolerance X7R Multilayer Ceramic Capacitor
+C5,0.1uF,BottomLayer,C0603,31.31,25.5,180,CL10 Series 0603 0.1 uF 50 V ±10% Tolerance X7R Multilayer Ceramic Capacitor
+C6,0.1uF,BottomLayer,C0603,18.11,16,270,CL10 Series 0603 0.1 uF 50 V ±10% Tolerance X7R Multilayer Ceramic Capacitor
+C7,0.1uF,BottomLayer,C0603,27,11.36,180,CL10 Series 0603 0.1 uF 50 V ±10% Tolerance X7R Multilayer Ceramic Capacitor
+C8,0.1uF,BottomLayer,C0603,23.31,24.11,270,CL10 Series 0603 0.1 uF 50 V ±10% Tolerance X7R Multilayer Ceramic Capacitor
+C9,0.1uF,BottomLayer,C0603,18.11,19.5,270,CL10 Series 0603 0.1 uF 50 V ±10% Tolerance X7R Multilayer Ceramic Capacitor
+C11,22pF,BottomLayer,C0603,16.11,3.5,270,Cap Ceramic 22pF 50VDC C0G 5% SMD 0603 Paper T/R
+C12,0.1uF,BottomLayer,C0603,33.75,33.79,180,CL10 Series 0603 0.1 uF 50 V ±10% Tolerance X7R Multilayer Ceramic Capacitor
+C15,10pF,BottomLayer,C0603,33.71,17.4,0,Cap Cer 10PF 100V Npo 0603
+C14,10pF,BottomLayer,C0603,33.71,23.3,180,Cap Cer 10PF 100V Npo 0603
+D3,Green,TopLayer,Rohm_SML-D12_Green,26.91,19.225,90,"ROHM - SML-D12P8WT86 - LED, EXCELED, Green, SMD, 0603, 20 mA, 2.2 V, 560 nm"
+H1,ESQ-106-14-G-D,BottomLayer,ESQ-106,5.01,27.04,270,Conn Elevated Socket SKT 12 POS 2.54mm Solder ST Thru-Hole Tube
+H2,ESQ-107-14-G-D,BottomLayer,ESQ-107,5.01,9.261,270,"SAMTEC         ESQ-107-14-G-D             Board-To-Board Connector, Elevated, ESQ Series, 14 Contacts, Receptacle, 2.54 mm, Solder, 2 Rows"
+H3,ESQ-106-14-G-D,BottomLayer,ESQ-106,45.01,27.04,270,Conn Elevated Socket SKT 12 POS 2.54mm Solder ST Thru-Hole Tube
+H4,ESQ-107-14-G-D,BottomLayer,ESQ-107,45.01,9.261,270,"SAMTEC         ESQ-107-14-G-D             Board-To-Board Connector, Elevated, ESQ Series, 14 Contacts, Receptacle, 2.54 mm, Solder, 2 Rows"
+J1,MCR-B-S-RA-SMT-CS5A-NF-T/R,TopLayer,MCR-B-S-RA-SMT-CS5-T/R,25.01,3.335,180,
+J2,Grove SMD,TopLayer,GROVE_WAY_SMD,15.81,30.2,0,
+J3,Grove SMD,TopLayer,GROVE_WAY_SMD,34.21,30.1875,0,
+J4,Grove SMD,TopLayer,GROVE_WAY_SMD,15.81,12.7,0,
+J5,Grove SMD,TopLayer,GROVE_WAY_SMD,34.21,12.6875,0,
+L1,120 Ohms 2A,BottomLayer,0603_IND,39.71,10.9,180,"MURATA - BLM18PG121SN1D - FERRITE, BEAD, 0603, 0.05OHM, 2A"
+L2,120 Ohms 2A,BottomLayer,0603_IND,33.61,10.9,0,"MURATA - BLM18PG121SN1D - FERRITE, BEAD, 0603, 0.05OHM, 2A"
+R3,1M,BottomLayer,R0603,18.71,3.45,270,RES SMD 1M OHM 1% 1/10W 0603
+R4,10K,BottomLayer,R0603,38.01,32.31,0,Res General Purpose Thick Film 0603 10K Ohm 1% 1/10W ±100ppm/°C Molded SMD Paper T/R
+R5,10K,BottomLayer,R0603,29.51,32.3,180,Res General Purpose Thick Film 0603 10K Ohm 1% 1/10W ±100ppm/°C Molded SMD Paper T/R
+R6,10K,BottomLayer,R0603,29.51,29.7,180,Res General Purpose Thick Film 0603 10K Ohm 1% 1/10W ±100ppm/°C Molded SMD Paper T/R
+R7,2K2,BottomLayer,R0603,38.03,29.67,0,"YAGEO - RC0603FR-072K2L.. - RES, THICK FILM, 2K2, 1%, 0.1W, 0603"
+R8,1K,BottomLayer,R0603,33.53,13.39,180,RES SMD 1K OHM 1% 1/10W 0603
+R9,12K,BottomLayer,R0603,33.51,15.4,0,"YAGEO - RC0603FR-0712KL - SMD Chip Resistor, 0603 [1608 Metric], 12 kohm, RC Series, 75 V, Thick Film, 100 mW"
+R10,4K7,BottomLayer,R0603,13.21,20.5,0,RES SMD 4.7K OHM 1% 1/10W 0603
+R11,4K7,BottomLayer,R0603,13.21,23,180,RES SMD 4.7K OHM 1% 1/10W 0603
+R13,4K7,BottomLayer,R0603,38.3,20.49,0,RES SMD 4.7K OHM 1% 1/10W 0603
+R14,4K7,BottomLayer,R0603,38.31,23,180,RES SMD 4.7K OHM 1% 1/10W 0603
+R16,4K7,BottomLayer,R0603,13.31,3,0,RES SMD 4.7K OHM 1% 1/10W 0603
+R17,4K7,BottomLayer,R0603,13.31,5.5,180,RES SMD 4.7K OHM 1% 1/10W 0603
+R18,4K7,BottomLayer,R0603,35.21,1.3,180,RES SMD 4.7K OHM 1% 1/10W 0603
+R19,220R,TopLayer,R0603,23.11,22.5,90,"THICK FILM RESISTOR, 220 OHM, 100mW, 1%; Product Range:RC Series; Resistance:220ohm; Power Rating:100mW; Resistance Tolerance: 1%; Voltage Rating:50V; Resistor Case Style:0603 [1608 Metric]; Packaging:Cut Tape; MSL:-; No. of Pins:2 ;RoHS Compliant: Yes"
+R20,220R,TopLayer,R0603,26.91,22.5,90,"THICK FILM RESISTOR, 220 OHM, 100mW, 1%; Product Range:RC Series; Resistance:220ohm; Power Rating:100mW; Resistance Tolerance: 1%; Voltage Rating:50V; Resistor Case Style:0603 [1608 Metric]; Packaging:Cut Tape; MSL:-; No. of Pins:2 ;RoHS Compliant: Yes"
+R21,4K7,BottomLayer,R0603,35.21,3.6,0,RES SMD 4.7K OHM 1% 1/10W 0603
+SW1,DPST,TopLayer,204-211ST,14.01,21.77,180,SWITCH SLIDE DIP DPST 50MA 24V
+SW2,DPST,TopLayer,204-211ST,36.01,21.71,180,SWITCH SLIDE DIP DPST 50MA 24V
+SW3,DPST,TopLayer,204-211ST,14.01,4.2,180,SWITCH SLIDE DIP DPST 50MA 24V
+SW4,DPST,TopLayer,204-211ST,36.01,4.24,180,SWITCH SLIDE DIP DPST 50MA 24V
+U1,FT2232H-56Q,BottomLayer,FT2232H-56Q,25.01,17.5,180,IC DUAL USB TO UART/FIFO 56VQFN
+U2,93LC56BT-I/OT,BottomLayer,SOT23-93C56B,33.71,30.61,180,"MICROCHIP - 93LC56BT-I/OT. - 2K, 128 X 16, SERIAL EE, IND ROHS COMPLIANT: YES"
+X1,12MHz,BottomLayer,TXC8Z,33.71,20.4,90,Crystal 12MHz ±30ppm (Tol) ±30ppm (Stability) 18pF FUND 150Ohm 4-Pin SMD T/R

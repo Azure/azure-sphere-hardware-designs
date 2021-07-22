@@ -1,0 +1,18 @@
+----------------------------------------------------------------------------------------------------------------------------------
+NCDrill File Report For: P-MT3620RDB-PS-1-0.PcbDoc   28/05/2021  11:57:00
+----------------------------------------------------------------------------------------------------------------------------------
+
+Layer Pair : Component Side to Bottom Layer
+ASCII RoundHoles File : P-MT3620RDB-PS-1-0-RoundHoles.TXT
+ASCII SlotHoles File : P-MT3620RDB-PS-1-0-SlotHoles.TXT
+
+Tool       Hole Size               Hole Tolerance               Hole Type       Hole Count   Plated         Tool Travel
+----------------------------------------------------------------------------------------------------------------------------------
+T1      8mil (0.2mm)                                              Round             95        PTH        0.00inch (0.00mm)
+T2      28mil (0.7mm)                                             Round             2         PTH        0.00inch (0.00mm)
+T3      28mil (0.7mm)                                             Slot              2         PTH        0.00inch (0.00mm)
+T4      32mil (0.8mm)                                             Round             52        PTH        0.00inch (0.00mm)
+----------------------------------------------------------------------------------------------------------------------------------
+Totals                                                                              151
+
+Total Processing Time (hh:mm:ss) : 00:00:00
