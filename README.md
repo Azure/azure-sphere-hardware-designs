@@ -14,6 +14,7 @@ You may also be interested in:
 - [P-FTINT-1-1](https://github.com/Azure/azure-sphere-hardware-designs/tree/master/P-FTINT-1-1) - Version 1.1 of standalone FTDI programming and debug interface board
 - [P-MT3620EXMSTLP-1-0](https://github.com/Azure/azure-sphere-hardware-designs/tree/master/P-MT3620EXMSTLP-1-0) - Version 1.0 of the Device To Cloud - External MCU, Low Power reference design
 - [P-MT3620RDB-PS-1-0](https://github.com/Azure/azure-sphere-hardware-designs/tree/master/P-MT3620RDB-PS-1-0) - Version 1.0 of the MT3620 RDB prototyping shield design
+- [MT3520-3D-Model](https://github.com/Azure/azure-sphere-hardware-designs/tree/master/MT3620-3D-Model) - A 3D step model of the MT3620 microchip
 
 # Contributing
 
