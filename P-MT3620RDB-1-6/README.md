@@ -28,7 +28,7 @@ P-MT3620RDB-1-6_StructuredBoM (Production).xlsx is an Excel spreadsheet that con
 - Parts required to support the Future Technology Devices International (FTDI) interface
 - Parts required to support general development board features
 
-Note: It is necessary to program the FTDI EEPROM using the contents of the [MT3620_Standard_Interface.xml](https://github.com/Azure/azure-sphere-hardware-designs/tree/master/FTDI) configuration before the Azure Sphere SDK will recognize the FTDI device as a valid programming and debugging interface.
+Note: It is necessary to program the FTDI EEPROM using the contents of the [MT3620_Standard_Interface.xml](https://github.com/Azure/azure-sphere-hardware-designs/tree/main/FTDI) configuration before the Azure Sphere SDK will recognize the FTDI device as a valid programming and debugging interface.
 
 Additionally, the [MT3620 RDB user guide](https://docs.microsoft.com/azure-sphere/hardware/mt3620-user-guide) provides a user-level overview of the board's main features. 
 

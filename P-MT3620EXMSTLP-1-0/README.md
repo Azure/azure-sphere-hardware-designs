@@ -22,7 +22,7 @@ The MT3620 on the Avnet module has the following features available in this desi
 - Dedicated RGB LED (MT3620 - LEDs)
 - One PWM output and one ADC input (MT3620 - SPARE)
 
-The board is designed to interface with the Azure Sphere [FTDI Interface board](https://github.com/Azure/azure-sphere-hardware-designs/tree/master/P-FTINT-1-1). This provides a way to connect the board to a host computer via a USB port for programming/debugging/recovering as with an MT3620 RDB.
+The board is designed to interface with the Azure Sphere [FTDI Interface board](https://github.com/Azure/azure-sphere-hardware-designs/tree/main/P-FTINT-1-1). This provides a way to connect the board to a host computer via a USB port for programming/debugging/recovering as with an MT3620 RDB.
 
 The STM32L031 microcontroller supports the following features which are available in this design:
 
@@ -61,13 +61,13 @@ This project contains the design files for the Device To Cloud - External MCU, L
 
 ## Deploying the software reference solution on the hardware reference design PCB
 
-To run the [DeviceToCloud reference solution](https://github.com/Azure/azure-sphere-samples/tree/master/Samples/DeviceToCloud) on the hardware reference design PCB, follow the instructions in the [BuildMcuToCloud.md](https://github.com/Azure/azure-sphere-samples/blob/master/Samples/DeviceToCloud/ExternalMcuLowPower/BuildMcuToCloud.md) file, starting from [Build and deploy the MCU app](https://github.com/Azure/azure-sphere-samples/blob/master/Samples/DeviceToCloud/ExternalMcuLowPower/BuildMcuToCloud.md#build-and-deploy-the-mcu-app). You will first need to make the following changes:
+To run the [DeviceToCloud reference solution](https://github.com/Azure/azure-sphere-samples/tree/main/Samples/DeviceToCloud) on the hardware reference design PCB, follow the instructions in the [BuildMcuToCloud.md](https://github.com/Azure/azure-sphere-samples/blob/main/Samples/DeviceToCloud/ExternalMcuLowPower/BuildMcuToCloud.md) file, starting from [Build and deploy the MCU app](https://github.com/Azure/azure-sphere-samples/blob/main/Samples/DeviceToCloud/ExternalMcuLowPower/BuildMcuToCloud.md#build-and-deploy-the-mcu-app). You will first need to make the following changes:
 
-- Modify the DeviceToCloud reference solution [cmakelists.txt](https://github.com/Azure/azure-sphere-samples/tree/master/Samples/DeviceToCloud/ExternalMcuLowPower/AzureSphere_HighLevelApp) file to point to the hardware definition for the board.
+- Modify the DeviceToCloud reference solution [cmakelists.txt](https://github.com/Azure/azure-sphere-samples/tree/main/Samples/DeviceToCloud/ExternalMcuLowPower/AzureSphere_HighLevelApp) file to point to the hardware definition for the board.
 
     For example, `azsphere_target_hardware_definition(${PROJECT_NAME} TARGET_DIRECTORY "../HardwareDefinitions/msft_m2c_hwref" TARGET_DEFINITION "soda_machine.json")`.
 
-- Update the STM32 application, [McuSoda](https://github.com/Azure/azure-sphere-samples/tree/master/Samples/DeviceToCloud/ExternalMcuLowPower/McuSoda), to work with the hardware reference solution.
+- Update the STM32 application, [McuSoda](https://github.com/Azure/azure-sphere-samples/tree/main/Samples/DeviceToCloud/ExternalMcuLowPower/McuSoda), to work with the hardware reference solution.
 
    1. Open the solution in the STM32 Cube IDE, and open the file McuSoda.ioc:
 
@@ -96,7 +96,7 @@ To run the [DeviceToCloud reference solution](https://github.com/Azure/azure-sph
 
    1. Press the Ctrl-S to save the settings then rebuild and deploy the application.
 
-- Where the [Build and deploy the MCU app](https://github.com/Azure/azure-sphere-samples/blob/master/Samples/DeviceToCloud/ExternalMcuLowPower/BuildMcuToCloud.md#build-and-deploy-the-mcu-app) instructions say to connect development boards to the PC, instead connect the custom hardware as described and illustrated above.
+- Where the [Build and deploy the MCU app](https://github.com/Azure/azure-sphere-samples/blob/main/Samples/DeviceToCloud/ExternalMcuLowPower/BuildMcuToCloud.md#build-and-deploy-the-mcu-app) instructions say to connect development boards to the PC, instead connect the custom hardware as described and illustrated above.
 
 ## Current monitoring on hardware
 The hardware provides headers and current sense resistors for monitoring the current consumption of the MT3620 chip.
@@ -116,4 +116,4 @@ The Avnet module V1 is used in this design. This design is also compatible with 
 
 ## Wakeup and Reset
 
-When the chip enters PowerDown mode, the MT3620 reset button on the board has no effect, i.e. pressing the reset button does not reset or wake the chip from PowerDown mode. This shortcoming has been addressed in the latest version of the MT3620 RDB (v1.7), but this design has not been updated with those changes. See the [RDB v1.7 design](https://github.com/Azure/azure-sphere-hardware-designs/tree/master/P-MT3620RDB-1-7) for more details.
+When the chip enters PowerDown mode, the MT3620 reset button on the board has no effect, i.e. pressing the reset button does not reset or wake the chip from PowerDown mode. This shortcoming has been addressed in the latest version of the MT3620 RDB (v1.7), but this design has not been updated with those changes. See the [RDB v1.7 design](https://github.com/Azure/azure-sphere-hardware-designs/tree/main/P-MT3620RDB-1-7) for more details.
