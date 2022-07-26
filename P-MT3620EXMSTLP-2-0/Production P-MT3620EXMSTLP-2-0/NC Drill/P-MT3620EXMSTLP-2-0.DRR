@@ -1,0 +1,20 @@
+----------------------------------------------------------------------------------------------------------------------------------
+NCDrill File Report For: P-MT3620EXMSTLP-2-0.PcbDoc   11/05/2022  15:24:20
+----------------------------------------------------------------------------------------------------------------------------------
+
+Layer Pair : Top Layer to Bottom Layer
+ASCII RoundHoles File : P-MT3620EXMSTLP-2-0-RoundHoles.TXT
+ASCII SlotHoles File : P-MT3620EXMSTLP-2-0-SlotHoles.TXT
+
+Tool       Hole Size               Hole Tolerance               Hole Type       Hole Count   Plated         Tool Travel
+----------------------------------------------------------------------------------------------------------------------------------
+T1      0.3mm (12mil)                                             Round             193       PTH        743.55mm (29.27inch)
+T2      0.65mm (26mil)                                            Slot              2         PTH        15.33mm (0.60inch)
+T3      0.762mm (30mil)                                           Round             2         PTH        2.50mm (0.10inch)
+T4      0.85mm (33mil)                                            Round             2         PTH        5.00mm (0.20inch)
+T5      0.9mm (35mil)                                             Round             6         PTH        33.22mm (1.31inch)
+T6      1.016mm (40mil)                                           Round             20        PTH        124.25mm (4.89inch)
+----------------------------------------------------------------------------------------------------------------------------------
+Totals                                                                              225
+
+Total Processing Time (hh:mm:ss) : 00:00:01
