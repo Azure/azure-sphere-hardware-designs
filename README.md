@@ -12,7 +12,9 @@ You may also be interested in:
 - [P-MT3620RDB-1-6](https://github.com/Azure/azure-sphere-hardware-designs/tree/main/P-MT3620RDB-1-6) - Version 1.6 of the MT3620 Reference Development Board (RDB)
 - [P-MT3620RDB-1-7](https://github.com/Azure/azure-sphere-hardware-designs/tree/main/P-MT3620RDB-1-7) - Version 1.7 of the MT3620 Reference Development Board (RDB)
 - [P-FTINT-1-1](https://github.com/Azure/azure-sphere-hardware-designs/tree/main/P-FTINT-1-1) - Version 1.1 of standalone FTDI programming and debug interface board
+- [P-FTINT-2-0](https://github.com/Azure/azure-sphere-hardware-designs/tree/main/P-FTINT-2-0) - Version 2.0 of standalone FTDI programming and debug interface board
 - [P-MT3620EXMSTLP-1-0](https://github.com/Azure/azure-sphere-hardware-designs/tree/main/P-MT3620EXMSTLP-1-0) - Version 1.0 of the Device To Cloud - External MCU, Low Power reference design
+- [P-MT3620EXMSTLP-2-0](https://github.com/Azure/azure-sphere-hardware-designs/tree/main/P-MT3620EXMSTLP-2-0) - Version 2.0 of the Device To Cloud - External MCU, Low Power reference design
 - [P-MT3620RDB-PS-1-0](https://github.com/Azure/azure-sphere-hardware-designs/tree/main/P-MT3620RDB-PS-1-0) - Version 1.0 of the MT3620 RDB prototyping shield design
 - [MT3620-3D-Model](https://github.com/Azure/azure-sphere-hardware-designs/tree/main/MT3620-3D-Model) - A 3D step model of the MT3620 microchip
 
