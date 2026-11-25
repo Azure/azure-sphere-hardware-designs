@@ -1,4 +1,6 @@
-# Azure Sphere Hardware Designs
+# Azure Sphere Hardware Designs [ARCHIVED]
+
+> **Warning:** This project is no longer actively maintained or supported. No new issues, pull requests, or updates will be accepted.
 
 This repository houses hardware designs for the Azure Sphere product that are created and maintained by Microsoft. See https://docs.microsoft.com/en-us/azure-sphere/hardware/hardware-manufacturing-overview for more information on hardware design and manufacturing guidance for Azure Sphere.
 
